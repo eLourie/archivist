@@ -19,7 +19,7 @@ Full-text document search service powered by **FastAPI**, **PostgreSQL**, and **
 ### 1. Clone the repository
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/eLourie/archivist.git
 cd archivist
 ```
 
