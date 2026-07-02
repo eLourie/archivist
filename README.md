@@ -29,7 +29,7 @@ cd archivist
 cp .env.example .env
 ```
 
-The default values in `.env.example` work out of the box — no changes needed.
+The default values work out of the box — no changes needed.
 
 ### 3. Start all services
 
@@ -61,7 +61,7 @@ Expected response:
 
 ### 5. Load data
 
-Place your CSV file in the `data/` folder (it is git-ignored), then copy it into the running container and run the loader:
+The sample dataset is already included in `data/posts.csv`. Copy it into the running container and run the loader:
 
 ```bash
 docker compose cp data/posts.csv app:/app/data/posts.csv
@@ -210,8 +210,8 @@ archivist/
 │   ├── services/
 │   │   └── document_service.py   # Business logic
 │   └── main.py                   # FastAPI app factory
-├── data/                         # CSV data files (git-ignored)
-│   └── .gitkeep
+├── data/
+│   └── posts.csv                 # Sample dataset (1500 documents)
 ├── scripts/
 │   └── load_data.py              # CSV → PostgreSQL + Elasticsearch loader
 ├── tests/
