@@ -1,4 +1,4 @@
-import logging_config
+import logging
 import sys
 
 from app.core.config import settings
@@ -11,10 +11,8 @@ def setup_logging() -> None:
         format=log_format,
         stream=sys.stdout,
     )
-    # Silence noisy third-party loggers
     logging.getLogger("elastic_transport").setLevel(logging.WARNING)
     logging.getLogger("httpx").setLevel(logging.WARNING)
 
 
 logger = logging.getLogger(__name__)
-
