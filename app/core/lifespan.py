@@ -2,7 +2,7 @@ import logging
 
 from app.core.logging import setup_logging
 from app.db.postgres import engine, Base
-from app.db.elasticsearch import es_client, ensure_index
+from app.db.elasticsearch_client import es_client, ensure_index
 
 logger = logging.getLogger(__name__)
 
