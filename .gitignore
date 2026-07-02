@@ -222,3 +222,7 @@ __marimo__/
 
 #Claude
 .claude
+
+#CSV data
+data/*
+!data/.gitkeep
