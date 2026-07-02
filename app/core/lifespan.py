@@ -1,6 +1,6 @@
-import logging
+import logging_config
 
-from app.core.logging import setup_logging
+from app.core.logging_config import setup_logging
 from app.db.postgres import engine, Base
 from app.db.elasticsearch_client import es_client, ensure_index
 
